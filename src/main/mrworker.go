@@ -5,7 +5,7 @@ package main
 // in ../mr/worker.go. typically there will be
 // multiple worker processes, talking to one coordinator.
 //
-// go run mrworker.go wc.so
+// go run mrworker.go ../mrapps/wc.so
 //
 // Please do not change this file.
 //
