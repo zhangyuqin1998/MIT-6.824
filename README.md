@@ -1,7 +1,7 @@
 # MIT-6.824
 Basic Sources for MIT 6.824 Distributed Systems Class
 
-MIT 6.824 课程的学习资料 代码更新为2021版
+MIT 6.824 课程的学习资料 资料是fork来的，代码是我自己的实现
 
 ## 课程安排 Schedule
 
