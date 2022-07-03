@@ -1,7 +1,20 @@
 # MIT-6.824
 Basic Sources for MIT 6.824 Distributed Systems Class
 
-MIT 6.824 课程的学习资料 资料是fork来的，代码是我自己的实现
+MIT 6.824 课程的学习资料是fork来的，代码是我自己的实现
+
+目前进度：
+
+Lab1 MapReduce实验已经完成
+
+用了比较简单的并发队列来实现
+1. 开始时coordinato把所有map tasks加入队列
+2. 并发的worker从队列中取出map task
+3. 完成后会向coordinator发送消息
+4. 所有map都完成之后，coordinato会把reduce的任务也加入队列
+5. worker从队列中取出reduce task
+6. 所有任务都做完，job结束
+
 
 ## 课程安排 Schedule
 
