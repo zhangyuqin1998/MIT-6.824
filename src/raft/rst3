@@ -1,0 +1,311 @@
+Test (2A): initial election ...
+[Node 0 term 0 Canditater ]:time out, become a Canditator!
+[Node 2 term 0 Canditater ]:time out, become a Canditator!
+[Node 0 term 1 Canditater ]:start a vote broadcast!
+[Node 2 term 1 Canditater ]:start a vote broadcast!
+[Node 1 term 0 Follower ]:received a vote request from 2, term 1, positive
+[Node 0 term 1 Canditater ]:received a vote request from 2, term 1, negetive
+[Node 2 term 1 Leader ]:Canditate succeed, Votes:2
+[Node 1 term 1 Follower ]:received a vote request from 0, term 1, negetive
+[Node 2 term 1 Leader ]:received a vote request from 0, term 1, negetive
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 1 Follower ]:Canditate fail, time out true, Votes:1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+  ... Passed --   3.1  3   58    8110    0
+Test (2A): election after network failure ...
+[Node 1 term 0 Canditater ]:time out, become a Canditator!
+[Node 2 term 0 Canditater ]:time out, become a Canditator!
+[Node 1 term 1 Canditater ]:start a vote broadcast!
+[Node 2 term 0 Canditater ]:received a vote request from 1, term 1, positive
+[Node 1 term 1 Leader ]:Canditate succeed, Votes:2
+[Node 1 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 0 Follower ]:received a vote request from 1, term 1, positive
+[Node 1 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 1 term 1 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 0 term 1 Canditater ]:time out, become a Canditator!
+[Node 2 term 1 Canditater ]:time out, become a Canditator!
+[Node 1 term 1 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 0 term 2 Canditater ]:start a vote broadcast!
+[Node 2 term 2 Canditater ]:start a vote broadcast!
+[Node 2 term 2 Canditater ]:received a vote request from 0, term 2, negetive
+[Node 0 term 2 Canditater ]:received a vote request from 2, term 2, negetive
+[Node 2 term 2 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 0 term 2 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 1 term 1 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 1 term 1 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 0 term 2 Canditater ]:time out, become a Canditator!
+[Node 2 term 2 Canditater ]:time out, become a Canditator!
+[Node 0 term 3 Canditater ]:start a vote broadcast!
+[Node 2 term 2 Canditater ]:received a vote request from 0, term 3, positive
+[Node 0 term 3 Leader ]:Canditate succeed, Votes:2
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1
+[Node 1 term 1 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1
+[Node 1 term 1 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 1 term 3 Canditater ]:time out, become a Canditator!
+[Node 1 term 4 Canditater ]:start a vote broadcast!
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 3 Canditater ]:time out, become a Canditator!
+[Node 1 term 4 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 2 term 4 Canditater ]:start a vote broadcast!
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 4 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 4 Canditater ]:time out, become a Canditator!
+[Node 1 term 4 Canditater ]:time out, become a Canditator!
+[Node 2 term 5 Canditater ]:start a vote broadcast!
+[Node 1 term 5 Canditater ]:start a vote broadcast!
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 5 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 1 term 5 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 5 Canditater ]:time out, become a Canditator!
+[Node 2 term 6 Canditater ]:start a vote broadcast!
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 6 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 1 term 5 Canditater ]:time out, become a Canditator!
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 1 term 6 Canditater ]:start a vote broadcast!
+[Node 1 term 6 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 2 term 6 Canditater ]:time out, become a Canditator!
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 7 Canditater ]:start a vote broadcast!
+[Node 2 term 7 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 1 term 6 Canditater ]:time out, become a Canditator!
+[Node 1 term 7 Canditater ]:start a vote broadcast!
+[Node 2 term 7 Canditater ]:time out, become a Canditator!
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 1 term 7 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 2 term 8 Canditater ]:start a vote broadcast!
+[Node 1 term 7 Follower ]:received a vote request from 2, term 8, positive
+[Node 2 term 8 Leader ]:Canditate succeed, Votes:2
+[Node 2 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 3 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 8 Follower ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 8 Leader ]:heart beat, succeed cnt 1
+  ... Passed --   5.1  3  104    9194    0
+Test (2A): multiple elections ...
+[Node 0 term 0 Canditater ]:time out, become a Canditator!
+[Node 2 term 0 Canditater ]:time out, become a Canditator!
+[Node 2 term 1 Canditater ]:start a vote broadcast!
+[Node 1 term 0 Canditater ]:time out, become a Canditator!
+[Node 0 term 1 Canditater ]:start a vote broadcast!
+[Node 6 term 0 Follower ]:received a vote request from 0, term 1, positive
+[Node 0 term 1 Canditater ]:received a vote request from 2, term 1, negetive
+[Node 1 term 0 Canditater ]:received a vote request from 0, term 1, positive
+[Node 2 term 1 Canditater ]:received a vote request from 0, term 1, negetive
+[Node 3 term 0 Follower ]:received a vote request from 2, term 1, positive
+[Node 3 term 1 Follower ]:received a vote request from 0, term 1, negetive
+[Node 4 term 0 Canditater ]:received a vote request from 2, term 1, positive
+[Node 4 term 1 Follower ]:received a vote request from 0, term 1, negetive
+[Node 5 term 0 Follower ]:received a vote request from 2, term 1, positive
+[Node 5 term 1 Follower ]:received a vote request from 0, term 1, negetive
+[Node 2 term 1 Leader ]:Canditate succeed, Votes:4
+[Node 4 term 0 Canditater ]:time out, become a Canditator!
+[Node 6 term 1 Follower ]:received a vote request from 2, term 1, negetive
+[Node 1 term 1 Follower ]:received a vote request from 2, term 1, negetive
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 1 Follower ]:Canditate fail, time out true, Votes:3
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 1 term 1 Canditater ]:time out, become a Canditator!
+[Node 6 term 1 Canditater ]:time out, become a Canditator!
+[Node 2 term 1 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 4 term 1 Canditater ]:time out, become a Canditator!
+[Node 0 term 1 Canditater ]:time out, become a Canditator!
+[Node 1 term 2 Canditater ]:start a vote broadcast!
+[Node 6 term 2 Canditater ]:start a vote broadcast!
+[Node 5 term 1 Follower ]:received a vote request from 6, term 2, positive
+[Node 3 term 1 Canditater ]:time out, become a Canditator!
+[Node 4 term 1 Canditater ]:received a vote request from 6, term 2, positive
+[Node 3 term 1 Canditater ]:received a vote request from 6, term 2, positive
+[Node 6 term 2 Leader ]:Canditate succeed, Votes:4
+[Node 6 term 2 Leader ]:heart beat, succeed cnt 1
+[Node 1 term 2 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 2 term 1 Leader ]:heart beat, but turn to foller, new term 2
+[Node 0 term 2 Canditater ]:start a vote broadcast!
+[Node 6 term 2 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 2 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 6 term 2 Leader ]:heart beat, succeed cnt 1
+[Node 6 term 2 Leader ]:heart beat, succeed cnt 1
+[Node 3 term 2 Canditater ]:time out, become a Canditator!
+[Node 5 term 2 Canditater ]:time out, become a Canditator!
+[Node 6 term 2 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 2 Canditater ]:time out, become a Canditator!
+[Node 5 term 3 Canditater ]:start a vote broadcast!
+[Node 3 term 3 Canditater ]:start a vote broadcast!
+[Node 6 term 2 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 3 Canditater ]:start a vote broadcast!
+[Node 3 term 3 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 5 term 3 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 6 term 2 Leader ]:heart beat, succeed cnt 2
+[Node 0 term 3 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 1 term 2 Canditater ]:time out, become a Canditator!
+[Node 3 term 3 Canditater ]:time out, become a Canditator!
+[Node 5 term 3 Canditater ]:time out, become a Canditator!
+[Node 6 term 2 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 0 term 3 Canditater ]:time out, become a Canditator!
+[Node 1 term 3 Canditater ]:start a vote broadcast!
+[Node 0 term 3 Canditater ]:received a vote request from 1, term 3, negetive
+[Node 4 term 2 Follower ]:received a vote request from 1, term 3, positive
+[Node 5 term 3 Canditater ]:received a vote request from 1, term 3, negetive
+[Node 5 term 4 Canditater ]:start a vote broadcast!
+[Node 2 term 2 Canditater ]:time out, become a Canditator!
+[Node 1 term 3 Canditater ]:received a vote request from 5, term 4, positive
+[Node 3 term 4 Canditater ]:start a vote broadcast!
+[Node 4 term 3 Follower ]:received a vote request from 5, term 4, positive
+[Node 0 term 3 Canditater ]:received a vote request from 5, term 4, positive
+[Node 5 term 4 Leader ]:Canditate succeed, Votes:4
+[Node 5 term 4 Leader ]:heart beat, succeed cnt 1
+[Node 1 term 4 Follower ]:Canditate fail, time out true, Votes:2
+[Node 3 term 4 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 2 term 3 Canditater ]:start a vote broadcast!
+[Node 5 term 4 Leader ]:heart beat, succeed cnt 1
+[Node 6 term 2 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 3 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 6 term 2 Leader ]:heart beat, but turn to foller, new term 4
+[Node 5 term 4 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 1 term 4 Canditater ]:time out, become a Canditator!
+[Node 5 term 4 Leader ]:heart beat, succeed cnt 2
+[Node 1 term 5 Canditater ]:start a vote broadcast!
+[Node 2 term 3 Canditater ]:time out, become a Canditator!
+[Node 3 term 4 Canditater ]:time out, become a Canditator!
+[Node 1 term 5 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 0 term 4 Canditater ]:time out, become a Canditator!
+[Node 2 term 4 Canditater ]:start a vote broadcast!
+[Node 3 term 5 Canditater ]:start a vote broadcast!
+[Node 6 term 2 Follower ]:received a vote request from 3, term 5, positive
+[Node 4 term 4 Follower ]:received a vote request from 3, term 5, positive
+[Node 0 term 4 Canditater ]:received a vote request from 3, term 5, positive
+[Node 3 term 5 Leader ]:Canditate succeed, Votes:4
+[Node 3 term 5 Leader ]:heart beat, succeed cnt 1
+[Node 5 term 4 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 2 term 4 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 3 term 5 Leader ]:heart beat, succeed cnt 2
+[Node 5 term 4 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 1 term 5 Canditater ]:time out, become a Canditator!
+[Node 0 term 5 Canditater ]:time out, become a Canditator!
+[Node 4 term 5 Canditater ]:time out, become a Canditator!
+[Node 3 term 5 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 6 term 5 Canditater ]:time out, become a Canditator!
+[Node 5 term 4 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 1 term 6 Canditater ]:start a vote broadcast!
+[Node 6 term 5 Canditater ]:received a vote request from 1, term 6, positive
+[Node 0 term 5 Canditater ]:received a vote request from 1, term 6, positive
+[Node 2 term 4 Follower ]:received a vote request from 1, term 6, positive
+[Node 1 term 6 Leader ]:Canditate succeed, Votes:4
+[Node 1 term 6 Leader ]:heart beat, succeed cnt 1
+[Node 4 term 6 Canditater ]:start a vote broadcast!
+[Node 1 term 6 Leader ]:heart beat, succeed cnt 1
+[Node 4 term 6 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 3 term 5 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 5 term 4 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 1 term 6 Leader ]:heart beat, succeed cnt 1
+[Node 1 term 6 Leader ]:heart beat, succeed cnt 1
+[Node 4 term 6 Canditater ]:time out, become a Canditator!
+[Node 1 term 6 Leader ]:heart beat, succeed cnt 1
+[Node 4 term 7 Canditater ]:start a vote broadcast!
+[Node 6 term 6 Canditater ]:time out, become a Canditator!
+[Node 4 term 7 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 1 term 6 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 6 Canditater ]:time out, become a Canditator!
+[Node 6 term 7 Canditater ]:start a vote broadcast!
+[Node 1 term 6 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 7 Canditater ]:start a vote broadcast!
+[Node 6 term 7 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 0 term 7 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 4 term 7 Canditater ]:time out, become a Canditator!
+[Node 1 term 6 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 4 term 8 Canditater ]:start a vote broadcast!
+[Node 0 term 7 Follower ]:received a vote request from 4, term 8, positive
+[Node 3 term 6 Follower ]:received a vote request from 4, term 8, positive
+[Node 6 term 7 Follower ]:received a vote request from 4, term 8, positive
+[Node 2 term 6 Follower ]:received a vote request from 4, term 8, positive
+[Node 4 term 8 Leader ]:Canditate succeed, Votes:4
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 5 term 6 Canditater ]:time out, become a Canditator!
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 5 term 7 Canditater ]:start a vote broadcast!
+[Node 1 term 6 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 5 term 7 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 1 term 6 Leader ]:heart beat, succeed cnt 1, time out true
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 8 Canditater ]:time out, become a Canditator!
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 9 Canditater ]:start a vote broadcast!
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 2 term 8 Canditater ]:time out, become a Canditator!
+[Node 6 term 8 Canditater ]:time out, become a Canditator!
+[Node 0 term 9 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 1 term 8 Canditater ]:time out, become a Canditator!
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 3 term 8 Canditater ]:time out, become a Canditator!
+[Node 1 term 9 Canditater ]:start a vote broadcast!
+[Node 0 term 9 Canditater ]:time out, become a Canditator!
+[Node 4 term 8 Leader ]:heart beat, succeed cnt 1
+[Node 3 term 9 Canditater ]:start a vote broadcast!
+[Node 1 term 9 Canditater ]:Canditate fail, time out true, Votes:1
+[Node 0 term 10 Canditater ]:start a vote broadcast!
+[Node 6 term 8 Follower ]:received a vote request from 0, term 10, positive
+[Node 1 term 9 Follower ]:received a vote request from 0, term 10, positive
+[Node 2 term 8 Follower ]:received a vote request from 0, term 10, positive
+[Node 0 term 10 Leader ]:Canditate succeed, Votes:4
+[Node 0 term 10 Leader ]:heart beat, succeed cnt 1
+[Node 3 term 9 Canditater ]:received a vote request from 0, term 10, positive
+[Node 4 term 8 Leader ]:received a vote request from 0, term 10, positive
+[Node 5 term 8 Follower ]:received a vote request from 0, term 10, positive
+[Node 3 term 10 Follower ]:Canditate fail, time out true, Votes:1
+[Node 0 term 10 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 10 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 10 Leader ]:heart beat, succeed cnt 1
+[Node 0 term 10 Leader ]:heart beat, succeed cnt 1
+  ... Passed --   5.3  7  486   43947    0
+PASS
+ok  	6.824/raft	13.493s
