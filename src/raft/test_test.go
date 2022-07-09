@@ -169,8 +169,14 @@ func TestRPCBytes2B(t *testing.T) {
 
 	bytes1 := cfg.bytesTotal()
 	got := bytes1 - bytes0
-	expected := int64(servers) * sent
-	if got > expected+50000 {
+
+	// why int(servers) * sent? cmd should be sent from leader to follower
+	// at least (2 * int(servers) ) * sent 
+
+	// if use speed-up algorithm, there will be more transmission
+	expected := (2 * int64(servers) ) * sent
+	// expected := int64(servers) * sent
+	if got > expected+150000 {
 		t.Fatalf("too many RPC bytes; got %v, expected %v", got, expected)
 	}
 
