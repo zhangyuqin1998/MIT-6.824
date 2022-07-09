@@ -16,7 +16,7 @@ Lab1 MapReduce实验已经完成
 6. 所有任务都做完，job结束
 
 
-Lab1 MapReduce实验已经完成A和B，均为Passed
+Lab2 Raft实验已经完成A和B，均为Passed
 
 A 部分为选举
 B 部分为日志复制
