@@ -5,7 +5,9 @@ MIT 6.824 课程的学习资料是fork来的，代码是我自己的实现
 
 目前进度：
 
-Lab1 MapReduce实验已经完成
+
+**Lab1 MapReduce实验已经完成**
+
 
 用了比较简单的并发队列来实现
 1. 开始时coordinato把所有map tasks加入队列
@@ -16,45 +18,26 @@ Lab1 MapReduce实验已经完成
 6. 所有任务都做完，job结束
 
 
-Lab2 Raft实验已经完成A和B，均为Passed
+**Lab2 Raft实验已经完成A,B,C，TEST均Passed**
+
 
 A 部分为选举
 B 部分为日志复制
 C 部分为持久化
 D 部分为快照
 
-按照Raft论文里的做法实现
-主要时间还是花在了调试上，打印了很多log，来检查并发编程中和预期不符的地方
+
+其中比较关键的是，按照论文的逻辑，不要自己胡乱修改逻辑（血泪教训，A和B的一些地方和论文里不大一样，但能过TEST，到了C，发现还是要按照论文的逻辑才行）
 
 
-## 课程安排 Schedule
+一个难点是论文中Figure 8的情形，Leader只能间接提交非当前任期的log
 
-[课程安排](https://pdos.csail.mit.edu/6.824/schedule.html)
 
-## 视频 Videos
+另外，只有VoteFor, log, Term需要持久化，commitIndex不需要持久化，我理解commit更是一个逻辑上而非程序上的概念，当一个logEntry被复制到超过半数的Node，这个logEntry在逻辑上就已经被commit了；有一个场景可以更好的理解这个问题：Leader将一个logEntry复制到了超过半数Follower，此时，Leader更新自己的commitIndex，紧接着Leader下线，其余Node并不知晓Leader更新了commitIndex。这种情形下，该logEntry在程序上还未被Follower提交，但确实已经被复制到超过半数的节点，于是，在下一次选举中，新的Leader必定是持有该logEntry的Node，最后，该logEntry仍然会被在程序上commit。
 
-[2020年lectures视频地址](https://www.bilibili.com/video/av87684880)
 
-## 讲座 Lectures
+因为白天要上班，撸代码的时间集中在周末和晚上，主要时间还是花在了调试上，打印了很多log，来检查并发编程中和预期不符的地方，其中C看起来很简单，但实际上花了最久的时间，因为写A和B的时候留下了不少坑
 
-- [Lec1: 入门介绍(以MapReduce为例)](https://github.com/chaozh/MIT-6.824/issues/2)
-- [Lec2: RPC与线程机制(Go语言实战)](https://github.com/chaozh/MIT-6.824/issues/3)
-- [Lec3: GFS](https://github.com/chaozh/MIT-6.824/issues/6)
-- [Lec4：主从备份](https://github.com/chaozh/MIT-6.824/issues/7)
-- [Lec 5：Raft基本](https://github.com/chaozh/MIT-6.824/issues/9)
-- [Lec6：Raft实现](https://github.com/chaozh/MIT-6.824/issues/10)
-
-## 问题 Questions
-
-记录在issues中
-
-- 课前问题：[对分布式系统课程有啥想说的？](https://github.com/chaozh/MIT-6.824/issues/1)
-- [Lab0 完成Crawler与KV的Go语言实验](https://github.com/chaozh/MIT-6.824/issues/4)
-- Lab1 MapReduce实验
-- [Lec3 请描述客户端从GFS读数据的大致流程？](https://github.com/chaozh/MIT-6.824/issues/6)
-- [Lec4 论文中VM FT如何处理网络分区问题？](https://github.com/chaozh/MIT-6.824/issues/7)
-- [Lec5 Raft什么机制会阻止他们当选？](https://github.com/chaozh/MIT-6.824/issues/9)
-- [Lec6 Figure13中第8步能否导致状态机重置，即接收InstallSnapshot RPC消息能否导致状态回退](https://github.com/chaozh/MIT-6.824/issues/10)
 
 ## 参考资料 Related
 
