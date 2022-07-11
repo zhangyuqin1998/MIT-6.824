@@ -16,6 +16,17 @@ Lab1 MapReduce实验已经完成
 6. 所有任务都做完，job结束
 
 
+Lab2 Raft实验已经完成A和B，均为Passed
+
+A 部分为选举
+B 部分为日志复制
+C 部分为持久化
+D 部分为快照
+
+按照Raft论文里的做法实现
+主要时间还是花在了调试上，打印了很多log，来检查并发编程中和预期不符的地方
+
+
 ## 课程安排 Schedule
 
 [课程安排](https://pdos.csail.mit.edu/6.824/schedule.html)
