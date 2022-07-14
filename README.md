@@ -48,6 +48,12 @@ D 部分为快照
 因为白天要上班，撸代码的时间集中在周末和晚上，主要时间还是花在了调试上，打印了很多log，来检查并发编程中和预期不符的地方，其中C看起来很简单，但实际上花了最久的时间，因为写A和B的时候留下了不少坑
 
 
+**Lab3 完成A引擎的编写，B是快照，时间问题就不写B了**
+
+
+这个Lab是基于raft实现一个kv存储系统，主要是难点在于保证线性一致性，看起来比Lab2简单一些。在每个raft的node外封装了一个kv server，kv client不与raft交互而是与kv server交互，我理解这里raft不是用来存储数据的，而是用来同步command的顺序，当然可以把Log里的command全读一遍得到存储的数据。看来网上别人的实现，发现大家还是用来map来存储数据，这里其实我没有很理解，把数据记录到leader的内存里，leader掉线了怎么处理呢？
+
+
 ## 参考资料 Related
 
 - [MapReduce(2004)](https://pdos.csail.mit.edu/6.824/papers/mapreduce.pdf)
