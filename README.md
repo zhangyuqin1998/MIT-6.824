@@ -51,7 +51,7 @@ D 部分为快照
 **Lab3 完成A引擎的编写，B是快照，时间问题就不写B了**
 
 
-这个Lab是基于raft实现一个kv存储系统，主要是难点在于保证线性一致性，看起来比Lab2简单一些。在每个raft的node外封装了一个kv server，kv client不与raft交互而是与kv server交互，我理解这里raft不是用来存储数据的，而是用来同步command的顺序，当然可以把Log里的command全读一遍得到存储的数据。看来网上别人的实现，发现大家还是用来map来存储数据，这里其实我没有很理解，把数据记录到leader的内存里，leader掉线了怎么处理呢？
+这个Lab是基于raft实现一个kv存储系统，主要是难点在于保证线性一致性，看起来比Lab2简单一些。在每个raft的node外封装了一个kv server，kv client不与raft交互而是与kv server交互，我理解这里raft不是用来存储数据的，而是用来同步command的顺序，当然在一个节点当选为leader的时候，可以把Log里的command全读一遍得到存储的数据。
 
 
 ## 参考资料 Related
