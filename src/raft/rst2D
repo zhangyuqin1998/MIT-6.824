@@ -1,0 +1,472 @@
+Test (2D): snapshots basic ...
+[N 2 T 1 Ca LL 0 CI 0 AI 0 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Ca LL 0 CI 0 AI 0 LI 0 ]:start a vote broadcast!
+[N 1 T 1 Fo LL 0 CI 0 AI 0 LI 0 ]:received a vote request from 2, term 1, args.LastLogTerm -1, my LastLogTerm -1 positive
+[N 1 T 1 Fo LL 0 CI 0 AI 0 LI 0 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 0 CI 0 AI 0 LI 0 ]:received a vote request from 2, term 1, args.LastLogTerm -1, my LastLogTerm -1 positive
+[N 2 T 1 Le LL 0 CI 0 AI 0 LI 0 ]:Canditate succeed, Votes:2
+[N 0 T 1 Fo LL 0 CI 0 AI 0 LI 0 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 0 CI 0 AI 0 LI 0 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 0, PrevLogTerm -1,  succeed
+[N 1 T 1 Fo LL 0 CI 0 AI 0 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 0 CI 0 AI 0 LI 0 ]:heart beat, reach agreement with 1
+[N 0 T 1 Fo LL 0 CI 0 AI 0 LI 0 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 0, PrevLogTerm -1,  succeed
+[N 0 T 1 Fo LL 0 CI 0 AI 0 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 1 CI 0 AI 0 LI 0 ]:received from client, %!s(int=4130326678696018558)
+[N 2 T 1 Le LL 1 CI 0 AI 0 LI 0 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 1 CI 0 AI 0 LI 0 ]: received a Entries, leader id 2, Entries len 1, PrevLogIndex 0, PrevLogTerm -1,  succeed
+[N 1 T 1 Fo LL 1 CI 0 AI 0 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 1 CI 0 AI 0 LI 0 ]:heart beat, reach agreement with 1
+[N 2 T 1 Le LL 1 CI 1 AI 0 LI 0 ]:heart beat, succeed early, cnt 2, commit 1 succeed, uuid 2
+[N 0 T 1 Fo LL 1 CI 1 AI 0 LI 0 ]: received a Entries, leader id 2, Entries len 1, PrevLogIndex 0, PrevLogTerm -1,  succeed
+[N 0 T 1 Fo LL 1 CI 1 AI 0 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]: ApplyLog 1, lastApplied 1,Command %!s(int=4130326678696018558)
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: ApplyLog 1, lastApplied 1,Command %!s(int=4130326678696018558)
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 1 CI 1 AI 0 LI 0 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 1, PrevLogTerm 1,  succeed
+[N 1 T 1 Fo LL 1 CI 1 AI 0 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, reach agreement with 1
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, succeed early, cnt 2, commit 1 succeed, uuid 3
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 1, PrevLogIndex 0, PrevLogTerm -1,  succeed
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: ApplyLog 1, lastApplied 1,Command %!s(int=4130326678696018558)
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 1, PrevLogTerm 1,  succeed
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, reach agreement with 1
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, succeed early, cnt 2, commit 1 succeed, uuid 4
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 1, PrevLogIndex 0, PrevLogTerm -1,  succeed
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 1, PrevLogTerm 1,  succeed
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, reach agreement with 1
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, succeed early, cnt 2, commit 1 succeed, uuid 5
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 1, PrevLogIndex 0, PrevLogTerm -1,  succeed
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 1, PrevLogTerm 1,  succeed
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 1, PrevLogIndex 0, PrevLogTerm -1,  succeed
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, reach agreement with 1
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, succeed early, cnt 2, commit 1 succeed, uuid 6
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 1, PrevLogTerm 1,  succeed
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, reach agreement with 1
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, succeed early, cnt 2, commit 1 succeed, uuid 7
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 1, PrevLogIndex 0, PrevLogTerm -1,  succeed
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 1, PrevLogIndex 0, PrevLogTerm -1,  succeed
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, reach agreement with 0
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, succeed early, cnt 2, commit 1 succeed, uuid 8
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 1, PrevLogTerm 1,  succeed
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 1, PrevLogTerm 1,  succeed
+[N 1 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, reach agreement with 1
+[N 2 T 1 Le LL 1 CI 1 AI 1 LI 0 ]:heart beat, succeed early, cnt 2, commit 1 succeed, uuid 9
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 1, PrevLogTerm 1,  succeed
+[N 0 T 1 Fo LL 1 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 2 CI 1 AI 1 LI 0 ]:received from client, %!s(int=714419236800321564)
+[N 2 T 1 Le LL 2 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 3 CI 1 AI 1 LI 0 ]:received from client, %!s(int=4298181837619290153)
+[N 2 T 1 Le LL 3 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 4 CI 1 AI 1 LI 0 ]:received from client, %!s(int=3983923941856746646)
+[N 2 T 1 Le LL 4 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 5 CI 1 AI 1 LI 0 ]:received from client, %!s(int=6880965153650869362)
+[N 2 T 1 Le LL 5 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 6 CI 1 AI 1 LI 0 ]:received from client, %!s(int=6511016065424719101)
+[N 2 T 1 Le LL 6 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 7 CI 1 AI 1 LI 0 ]:received from client, %!s(int=6515068194544692274)
+[N 2 T 1 Le LL 7 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 8 CI 1 AI 1 LI 0 ]:received from client, %!s(int=42472870966294939)
+[N 2 T 1 Le LL 8 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 9 CI 1 AI 1 LI 0 ]:received from client, %!s(int=3663330946055583345)
+[N 2 T 1 Le LL 9 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 10 CI 1 AI 1 LI 0 ]:received from client, %!s(int=3323028474431382686)
+[N 2 T 1 Le LL 10 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 11 CI 1 AI 1 LI 0 ]:received from client, %!s(int=8975706769045112501)
+[N 2 T 1 Le LL 11 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 12 CI 1 AI 1 LI 0 ]:received from client, %!s(int=6111807996720820148)
+[N 2 T 1 Le LL 12 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 1 AI 1 LI 0 ]:received from client, %!s(int=4207516823199114813)
+[N 2 T 1 Le LL 13 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 12, PrevLogIndex 1, PrevLogTerm 1,  succeed
+[N 0 T 1 Fo LL 13 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 1 AI 1 LI 0 ]:heart beat, reach agreement with 0
+[N 2 T 1 Le LL 13 CI 13 AI 1 LI 0 ]:heart beat, succeed early, cnt 2, commit 13 succeed, uuid 10
+[N 1 T 1 Fo LL 13 CI 1 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 12, PrevLogIndex 1, PrevLogTerm 1,  succeed
+[N 1 T 1 Fo LL 13 CI 1 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 2 LI 0 ]: ApplyLog 2, lastApplied 2,Command %!s(int=714419236800321564)
+[N 2 T 1 Le LL 13 CI 13 AI 2 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 3 LI 0 ]: ApplyLog 3, lastApplied 3,Command %!s(int=4298181837619290153)
+[N 2 T 1 Le LL 13 CI 13 AI 3 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 4 LI 0 ]: ApplyLog 4, lastApplied 4,Command %!s(int=3983923941856746646)
+[N 2 T 1 Le LL 13 CI 13 AI 4 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 5 LI 0 ]: ApplyLog 5, lastApplied 5,Command %!s(int=6880965153650869362)
+[N 2 T 1 Le LL 13 CI 13 AI 5 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 6 LI 0 ]: ApplyLog 6, lastApplied 6,Command %!s(int=6511016065424719101)
+[N 2 T 1 Le LL 13 CI 13 AI 6 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 7 LI 0 ]: ApplyLog 7, lastApplied 7,Command %!s(int=6515068194544692274)
+[N 2 T 1 Le LL 13 CI 13 AI 7 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 8 LI 0 ]: ApplyLog 8, lastApplied 8,Command %!s(int=42472870966294939)
+[N 2 T 1 Le LL 13 CI 13 AI 8 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 9 LI 0 ]: ApplyLog 9, lastApplied 9,Command %!s(int=3663330946055583345)
+[N 2 T 1 Le LL 13 CI 13 AI 9 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 10 LI 0 ]:Snapshot succeed, index 9
+[N 2 T 1 Le LL 13 CI 13 AI 10 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 10 LI 9 ]: ApplyLog 10, lastApplied 10,Command %!s(int=3323028474431382686)
+[N 2 T 1 Le LL 13 CI 13 AI 10 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 11 LI 9 ]: ApplyLog 11, lastApplied 11,Command %!s(int=8975706769045112501)
+[N 2 T 1 Le LL 13 CI 13 AI 11 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 12 LI 9 ]: ApplyLog 12, lastApplied 12,Command %!s(int=6111807996720820148)
+[N 2 T 1 Le LL 13 CI 13 AI 12 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 13 LI 9 ]: ApplyLog 13, lastApplied 13,Command %!s(int=4207516823199114813)
+[N 2 T 1 Le LL 13 CI 13 AI 13 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 1 LI 0 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 13, PrevLogTerm 1,  succeed
+[N 0 T 1 Fo LL 13 CI 13 AI 1 LI 0 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 13 CI 13 AI 13 LI 9 ]:heart beat, snapshot succeed, reach agreement with 1
+[N 1 T 1 Fo LL 13 CI 1 AI 1 LI 0 ]:CondInstallSnapshot succeed, rf.snapShot.lastIncludedTerm 0, lastIncludedTerm 1, rf.snapShot.lastIncludedIndex 0, lastIncludedIndex 9
+[N 2 T 1 Le LL 13 CI 13 AI 13 LI 9 ]:heart beat, reach agreement with 0
+[N 2 T 1 Le LL 13 CI 13 AI 13 LI 9 ]:heart beat, succeed early, cnt 3, commit 13 succeed, uuid 11
+[N 1 T 1 Fo LL 13 CI 9 AI 9 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 2 LI 0 ]: ApplyLog 2, lastApplied 2,Command %!s(int=714419236800321564)
+[N 0 T 1 Fo LL 13 CI 13 AI 2 LI 0 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 3 LI 0 ]: ApplyLog 3, lastApplied 3,Command %!s(int=4298181837619290153)
+[N 0 T 1 Fo LL 13 CI 13 AI 3 LI 0 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 4 LI 0 ]: ApplyLog 4, lastApplied 4,Command %!s(int=3983923941856746646)
+[N 0 T 1 Fo LL 13 CI 13 AI 4 LI 0 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 5 LI 0 ]: ApplyLog 5, lastApplied 5,Command %!s(int=6880965153650869362)
+[N 0 T 1 Fo LL 13 CI 13 AI 5 LI 0 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 6 LI 0 ]: ApplyLog 6, lastApplied 6,Command %!s(int=6511016065424719101)
+[N 0 T 1 Fo LL 13 CI 13 AI 6 LI 0 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 7 LI 0 ]: ApplyLog 7, lastApplied 7,Command %!s(int=6515068194544692274)
+[N 0 T 1 Fo LL 13 CI 13 AI 7 LI 0 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 8 LI 0 ]: ApplyLog 8, lastApplied 8,Command %!s(int=42472870966294939)
+[N 0 T 1 Fo LL 13 CI 13 AI 8 LI 0 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 9 LI 0 ]:Snapshot succeed, index 9
+[N 0 T 1 Fo LL 13 CI 13 AI 9 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 9 LI 9 ]: ApplyLog 9, lastApplied 9,Command %!s(int=3663330946055583345)
+[N 0 T 1 Fo LL 13 CI 13 AI 9 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 10 LI 9 ]: ApplyLog 10, lastApplied 10,Command %!s(int=3323028474431382686)
+[N 0 T 1 Fo LL 13 CI 13 AI 10 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 11 LI 9 ]: ApplyLog 11, lastApplied 11,Command %!s(int=8975706769045112501)
+[N 0 T 1 Fo LL 13 CI 13 AI 11 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 12 LI 9 ]: ApplyLog 12, lastApplied 12,Command %!s(int=6111807996720820148)
+[N 0 T 1 Fo LL 13 CI 13 AI 12 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 13 CI 13 AI 13 LI 9 ]: ApplyLog 13, lastApplied 13,Command %!s(int=4207516823199114813)
+[N 0 T 1 Fo LL 13 CI 13 AI 13 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 14 CI 13 AI 13 LI 9 ]:received from client, %!s(int=9177299328228288703)
+[N 2 T 1 Le LL 14 CI 13 AI 13 LI 9 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 14 CI 13 AI 9 LI 9 ]: received a Entries, leader id 2, Entries len 3, PrevLogIndex 11, PrevLogTerm 1,  succeed
+[N 1 T 1 Fo LL 14 CI 13 AI 9 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 14 CI 13 AI 13 LI 9 ]: received a Entries, leader id 2, Entries len 1, PrevLogIndex 13, PrevLogTerm 1,  succeed
+[N 0 T 1 Fo LL 14 CI 13 AI 13 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 14 CI 13 AI 13 LI 9 ]:heart beat, reach agreement with 1
+[N 2 T 1 Le LL 14 CI 14 AI 13 LI 9 ]:heart beat, succeed early, cnt 2, commit 14 succeed, uuid 12
+[N 2 T 1 Le LL 14 CI 14 AI 14 LI 9 ]: ApplyLog 14, lastApplied 14,Command %!s(int=9177299328228288703)
+[N 2 T 1 Le LL 14 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 14 CI 13 AI 10 LI 9 ]: ApplyLog 10, lastApplied 10,Command %!s(int=3323028474431382686)
+[N 1 T 1 Fo LL 14 CI 13 AI 10 LI 9 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 14 CI 13 AI 11 LI 9 ]: ApplyLog 11, lastApplied 11,Command %!s(int=8975706769045112501)
+[N 1 T 1 Fo LL 14 CI 13 AI 11 LI 9 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 14 CI 13 AI 12 LI 9 ]: ApplyLog 12, lastApplied 12,Command %!s(int=6111807996720820148)
+[N 1 T 1 Fo LL 14 CI 13 AI 12 LI 9 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 14 CI 13 AI 13 LI 9 ]: ApplyLog 13, lastApplied 13,Command %!s(int=4207516823199114813)
+[N 1 T 1 Fo LL 14 CI 13 AI 13 LI 9 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 14 CI 14 AI 13 LI 9 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 14, PrevLogTerm 1,  succeed
+[N 1 T 1 Fo LL 14 CI 14 AI 13 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 14 CI 14 AI 13 LI 9 ]: received a Entries, leader id 2, Entries len 1, PrevLogIndex 13, PrevLogTerm 1,  succeed
+[N 0 T 1 Fo LL 14 CI 14 AI 13 LI 9 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 14 CI 14 AI 14 LI 9 ]: ApplyLog 14, lastApplied 14,Command %!s(int=9177299328228288703)
+[N 1 T 1 Fo LL 14 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 14 CI 14 AI 14 LI 9 ]:heart beat, reach agreement with 1
+[N 2 T 1 Le LL 14 CI 14 AI 14 LI 9 ]:heart beat, succeed early, cnt 2, commit 14 succeed, uuid 13
+[N 0 T 1 Fo LL 14 CI 14 AI 14 LI 9 ]: ApplyLog 14, lastApplied 14,Command %!s(int=9177299328228288703)
+[N 0 T 1 Fo LL 14 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 15 CI 14 AI 14 LI 9 ]:received from client, %!s(int=4063182155617832658)
+[N 2 T 1 Le LL 15 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 16 CI 14 AI 14 LI 9 ]:received from client, %!s(int=1299823493101726557)
+[N 2 T 1 Le LL 16 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 17 CI 14 AI 14 LI 9 ]:received from client, %!s(int=954337905042365715)
+[N 2 T 1 Le LL 17 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 18 CI 14 AI 14 LI 9 ]:received from client, %!s(int=3438708910087910212)
+[N 2 T 1 Le LL 18 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 19 CI 14 AI 14 LI 9 ]:received from client, %!s(int=1108413795408245782)
+[N 2 T 1 Le LL 19 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 20 CI 14 AI 14 LI 9 ]:received from client, %!s(int=5061086259053521827)
+[N 2 T 1 Le LL 20 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 21 CI 14 AI 14 LI 9 ]:received from client, %!s(int=7265224481666628624)
+[N 2 T 1 Le LL 21 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 22 CI 14 AI 14 LI 9 ]:received from client, %!s(int=8801576425567519275)
+[N 2 T 1 Le LL 22 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 23 CI 14 AI 14 LI 9 ]:received from client, %!s(int=2762398414960944304)
+[N 2 T 1 Le LL 23 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 24 CI 14 AI 14 LI 9 ]:received from client, %!s(int=3897783399006576626)
+[N 2 T 1 Le LL 24 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 25 CI 14 AI 14 LI 9 ]:received from client, %!s(int=1417112422867198150)
+[N 2 T 1 Le LL 25 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 14 AI 14 LI 9 ]:received from client, %!s(int=1053155254825951842)
+[N 2 T 1 Le LL 26 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 14 AI 14 LI 9 ]: received a Entries, leader id 2, Entries len 13, PrevLogIndex 13, PrevLogTerm 1,  succeed
+[N 0 T 1 Fo LL 26 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 14 AI 14 LI 9 ]:heart beat, reach agreement with 0
+[N 2 T 1 Le LL 26 CI 26 AI 14 LI 9 ]:heart beat, succeed early, cnt 2, commit 26 succeed, uuid 14
+[N 1 T 1 Fo LL 26 CI 14 AI 14 LI 9 ]: received a Entries, leader id 2, Entries len 12, PrevLogIndex 14, PrevLogTerm 1,  succeed
+[N 1 T 1 Fo LL 26 CI 14 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 15 LI 9 ]: ApplyLog 15, lastApplied 15,Command %!s(int=4063182155617832658)
+[N 2 T 1 Le LL 26 CI 26 AI 15 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 16 LI 9 ]: ApplyLog 16, lastApplied 16,Command %!s(int=1299823493101726557)
+[N 2 T 1 Le LL 26 CI 26 AI 16 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 17 LI 9 ]: ApplyLog 17, lastApplied 17,Command %!s(int=954337905042365715)
+[N 2 T 1 Le LL 26 CI 26 AI 17 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 18 LI 9 ]: ApplyLog 18, lastApplied 18,Command %!s(int=3438708910087910212)
+[N 2 T 1 Le LL 26 CI 26 AI 18 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 19 LI 9 ]: ApplyLog 19, lastApplied 19,Command %!s(int=1108413795408245782)
+[N 2 T 1 Le LL 26 CI 26 AI 19 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 20 LI 9 ]:Snapshot succeed, index 19
+[N 2 T 1 Le LL 26 CI 26 AI 20 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 20 LI 19 ]: ApplyLog 20, lastApplied 20,Command %!s(int=5061086259053521827)
+[N 2 T 1 Le LL 26 CI 26 AI 20 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 21 LI 19 ]: ApplyLog 21, lastApplied 21,Command %!s(int=7265224481666628624)
+[N 2 T 1 Le LL 26 CI 26 AI 21 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 22 LI 19 ]: ApplyLog 22, lastApplied 22,Command %!s(int=8801576425567519275)
+[N 2 T 1 Le LL 26 CI 26 AI 22 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 23 LI 19 ]: ApplyLog 23, lastApplied 23,Command %!s(int=2762398414960944304)
+[N 2 T 1 Le LL 26 CI 26 AI 23 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 24 LI 19 ]: ApplyLog 24, lastApplied 24,Command %!s(int=3897783399006576626)
+[N 2 T 1 Le LL 26 CI 26 AI 24 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 25 LI 19 ]: ApplyLog 25, lastApplied 25,Command %!s(int=1417112422867198150)
+[N 2 T 1 Le LL 26 CI 26 AI 25 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 26 LI 19 ]: ApplyLog 26, lastApplied 26,Command %!s(int=1053155254825951842)
+[N 2 T 1 Le LL 26 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 26 LI 19 ]:heart beat, snapshot succeed, reach agreement with 1
+[N 0 T 1 Fo LL 26 CI 26 AI 14 LI 9 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 26, PrevLogTerm 1,  succeed
+[N 0 T 1 Fo LL 26 CI 26 AI 14 LI 9 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 26 CI 26 AI 26 LI 19 ]:heart beat, reach agreement with 0
+[N 2 T 1 Le LL 26 CI 26 AI 26 LI 19 ]:heart beat, succeed early, cnt 3, commit 26 succeed, uuid 15
+[N 1 T 1 Fo LL 26 CI 14 AI 14 LI 9 ]:CondInstallSnapshot succeed, rf.snapShot.lastIncludedTerm 1, lastIncludedTerm 1, rf.snapShot.lastIncludedIndex 9, lastIncludedIndex 19
+[N 1 T 1 Fo LL 26 CI 19 AI 19 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 15 LI 9 ]: ApplyLog 15, lastApplied 15,Command %!s(int=4063182155617832658)
+[N 0 T 1 Fo LL 26 CI 26 AI 15 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 16 LI 9 ]: ApplyLog 16, lastApplied 16,Command %!s(int=1299823493101726557)
+[N 0 T 1 Fo LL 26 CI 26 AI 16 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 17 LI 9 ]: ApplyLog 17, lastApplied 17,Command %!s(int=954337905042365715)
+[N 0 T 1 Fo LL 26 CI 26 AI 17 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 18 LI 9 ]: ApplyLog 18, lastApplied 18,Command %!s(int=3438708910087910212)
+[N 0 T 1 Fo LL 26 CI 26 AI 18 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 19 LI 9 ]: ApplyLog 19, lastApplied 19,Command %!s(int=1108413795408245782)
+[N 0 T 1 Fo LL 26 CI 26 AI 19 LI 9 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 20 LI 9 ]:Snapshot succeed, index 19
+[N 0 T 1 Fo LL 26 CI 26 AI 20 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 20 LI 19 ]: ApplyLog 20, lastApplied 20,Command %!s(int=5061086259053521827)
+[N 0 T 1 Fo LL 26 CI 26 AI 20 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 21 LI 19 ]: ApplyLog 21, lastApplied 21,Command %!s(int=7265224481666628624)
+[N 0 T 1 Fo LL 26 CI 26 AI 21 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 22 LI 19 ]: ApplyLog 22, lastApplied 22,Command %!s(int=8801576425567519275)
+[N 0 T 1 Fo LL 26 CI 26 AI 22 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 23 LI 19 ]: ApplyLog 23, lastApplied 23,Command %!s(int=2762398414960944304)
+[N 0 T 1 Fo LL 26 CI 26 AI 23 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 24 LI 19 ]: ApplyLog 24, lastApplied 24,Command %!s(int=3897783399006576626)
+[N 0 T 1 Fo LL 26 CI 26 AI 24 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 25 LI 19 ]: ApplyLog 25, lastApplied 25,Command %!s(int=1417112422867198150)
+[N 0 T 1 Fo LL 26 CI 26 AI 25 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 26 CI 26 AI 26 LI 19 ]: ApplyLog 26, lastApplied 26,Command %!s(int=1053155254825951842)
+[N 0 T 1 Fo LL 26 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 27 CI 26 AI 26 LI 19 ]:received from client, %!s(int=5385584828444190313)
+[N 2 T 1 Le LL 27 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 28 CI 26 AI 26 LI 19 ]:received from client, %!s(int=8373897087998198033)
+[N 2 T 1 Le LL 28 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 29 CI 26 AI 26 LI 19 ]:received from client, %!s(int=463292245579305967)
+[N 2 T 1 Le LL 29 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 30 CI 26 AI 26 LI 19 ]:received from client, %!s(int=1889728759710044591)
+[N 2 T 1 Le LL 30 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 31 CI 26 AI 26 LI 19 ]:received from client, %!s(int=7997847477879050888)
+[N 2 T 1 Le LL 31 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 32 CI 26 AI 26 LI 19 ]:received from client, %!s(int=5781746434942982753)
+[N 2 T 1 Le LL 32 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 33 CI 26 AI 26 LI 19 ]:received from client, %!s(int=509455568611775187)
+[N 2 T 1 Le LL 33 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 34 CI 26 AI 26 LI 19 ]:received from client, %!s(int=5312499558881396276)
+[N 2 T 1 Le LL 34 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 35 CI 26 AI 26 LI 19 ]:received from client, %!s(int=497318352608717589)
+[N 2 T 1 Le LL 35 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 36 CI 26 AI 26 LI 19 ]:received from client, %!s(int=2498024428875258930)
+[N 2 T 1 Le LL 36 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 37 CI 26 AI 26 LI 19 ]:received from client, %!s(int=8972781784612370071)
+[N 2 T 1 Le LL 37 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 26 AI 26 LI 19 ]:received from client, %!s(int=5833645943949774043)
+[N 2 T 1 Le LL 38 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 26 CI 19 AI 19 LI 19 ]: received a Entries, FollowerFail PrevLogIndex, leader id 2, PrevLogIndex 34, PrevLogTerm 1, Entries len 4
+[N 1 T 1 Fo LL 26 CI 19 AI 19 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 26 AI 26 LI 19 ]: received a Entries, leader id 2, Entries len 12, PrevLogIndex 26, PrevLogTerm 1,  succeed
+[N 0 T 1 Fo LL 38 CI 26 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 26 AI 26 LI 19 ]:heart beat, failed to reach agreement with 1, nextIndex turn to 26, FollowerFail_SU
+[N 2 T 1 Le LL 38 CI 26 AI 26 LI 19 ]:heart beat, reach agreement with 0
+[N 2 T 1 Le LL 38 CI 38 AI 26 LI 19 ]:heart beat, succeed early, cnt 2, commit 38 succeed, uuid 16
+[N 2 T 1 Le LL 38 CI 38 AI 27 LI 19 ]: ApplyLog 27, lastApplied 27,Command %!s(int=5385584828444190313)
+[N 2 T 1 Le LL 38 CI 38 AI 27 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 28 LI 19 ]: ApplyLog 28, lastApplied 28,Command %!s(int=8373897087998198033)
+[N 2 T 1 Le LL 38 CI 38 AI 28 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 29 LI 19 ]: ApplyLog 29, lastApplied 29,Command %!s(int=463292245579305967)
+[N 2 T 1 Le LL 38 CI 38 AI 29 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 30 LI 19 ]:Snapshot succeed, index 29
+[N 2 T 1 Le LL 38 CI 38 AI 30 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 30 LI 29 ]: ApplyLog 30, lastApplied 30,Command %!s(int=1889728759710044591)
+[N 2 T 1 Le LL 38 CI 38 AI 30 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 31 LI 29 ]: ApplyLog 31, lastApplied 31,Command %!s(int=7997847477879050888)
+[N 2 T 1 Le LL 38 CI 38 AI 31 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 32 LI 29 ]: ApplyLog 32, lastApplied 32,Command %!s(int=5781746434942982753)
+[N 2 T 1 Le LL 38 CI 38 AI 32 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 33 LI 29 ]: ApplyLog 33, lastApplied 33,Command %!s(int=509455568611775187)
+[N 2 T 1 Le LL 38 CI 38 AI 33 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 34 LI 29 ]: ApplyLog 34, lastApplied 34,Command %!s(int=5312499558881396276)
+[N 2 T 1 Le LL 38 CI 38 AI 34 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 35 LI 29 ]: ApplyLog 35, lastApplied 35,Command %!s(int=497318352608717589)
+[N 2 T 1 Le LL 38 CI 38 AI 35 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 36 LI 29 ]: ApplyLog 36, lastApplied 36,Command %!s(int=2498024428875258930)
+[N 2 T 1 Le LL 38 CI 38 AI 36 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 37 LI 29 ]: ApplyLog 37, lastApplied 37,Command %!s(int=8972781784612370071)
+[N 2 T 1 Le LL 38 CI 38 AI 37 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 38 LI 29 ]: ApplyLog 38, lastApplied 38,Command %!s(int=5833645943949774043)
+[N 2 T 1 Le LL 38 CI 38 AI 38 LI 29 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 26 CI 19 AI 19 LI 19 ]:InstallSnapshot fail, from 2, LastIncludedIndex 29, LastIncludedTerm 1
+[N 0 T 1 Fo LL 38 CI 38 AI 26 LI 19 ]: received a Entries, leader id 2, Entries len 0, PrevLogIndex 38, PrevLogTerm 1,  succeed
+[N 0 T 1 Fo LL 38 CI 38 AI 26 LI 19 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 38 CI 38 AI 38 LI 29 ]:heart beat, reach agreement with 0
+[N 2 T 1 Le LL 38 CI 38 AI 38 LI 29 ]:heart beat, succeed early, cnt 2, commit 38 succeed, uuid 17
+[N 0 T 1 Fo LL 38 CI 38 AI 27 LI 19 ]: ApplyLog 27, lastApplied 27,Command %!s(int=5385584828444190313)
+[N 0 T 1 Fo LL 38 CI 38 AI 27 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 28 LI 19 ]: ApplyLog 28, lastApplied 28,Command %!s(int=8373897087998198033)
+[N 0 T 1 Fo LL 38 CI 38 AI 28 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 29 LI 19 ]: ApplyLog 29, lastApplied 29,Command %!s(int=463292245579305967)
+[N 0 T 1 Fo LL 38 CI 38 AI 29 LI 19 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 30 LI 19 ]:Snapshot succeed, index 29
+[N 0 T 1 Fo LL 38 CI 38 AI 30 LI 29 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 30 LI 29 ]: ApplyLog 30, lastApplied 30,Command %!s(int=1889728759710044591)
+[N 0 T 1 Fo LL 38 CI 38 AI 30 LI 29 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 31 LI 29 ]: ApplyLog 31, lastApplied 31,Command %!s(int=7997847477879050888)
+[N 0 T 1 Fo LL 38 CI 38 AI 31 LI 29 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 32 LI 29 ]: ApplyLog 32, lastApplied 32,Command %!s(int=5781746434942982753)
+[N 0 T 1 Fo LL 38 CI 38 AI 32 LI 29 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 33 LI 29 ]: ApplyLog 33, lastApplied 33,Command %!s(int=509455568611775187)
+[N 0 T 1 Fo LL 38 CI 38 AI 33 LI 29 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 34 LI 29 ]: ApplyLog 34, lastApplied 34,Command %!s(int=5312499558881396276)
+[N 0 T 1 Fo LL 38 CI 38 AI 34 LI 29 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 35 LI 29 ]: ApplyLog 35, lastApplied 35,Command %!s(int=497318352608717589)
+[N 0 T 1 Fo LL 38 CI 38 AI 35 LI 29 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 36 LI 29 ]: ApplyLog 36, lastApplied 36,Command %!s(int=2498024428875258930)
+[N 0 T 1 Fo LL 38 CI 38 AI 36 LI 29 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 37 LI 29 ]: ApplyLog 37, lastApplied 37,Command %!s(int=8972781784612370071)
+[N 0 T 1 Fo LL 38 CI 38 AI 37 LI 29 ]:persist starts, voteFor 2 
+[N 0 T 1 Fo LL 38 CI 38 AI 38 LI 29 ]: ApplyLog 38, lastApplied 38,Command %!s(int=5833645943949774043)
+[N 0 T 1 Fo LL 38 CI 38 AI 38 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 39 CI 38 AI 38 LI 29 ]:received from client, %!s(int=8898011987314286622)
+[N 2 T 1 Le LL 39 CI 38 AI 38 LI 29 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 26 CI 19 AI 19 LI 19 ]:InstallSnapshot fail, from 2, LastIncludedIndex 29, LastIncludedTerm 1
+[N 0 T 1 Fo LL 39 CI 38 AI 38 LI 29 ]: received a Entries, leader id 2, Entries len 1, PrevLogIndex 38, PrevLogTerm 1,  succeed
+[N 0 T 1 Fo LL 39 CI 38 AI 38 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, reach agreement with 0
+[N 2 T 1 Le LL 39 CI 39 AI 38 LI 29 ]:heart beat, succeed early, cnt 2, commit 39 succeed, uuid 18
+[N 2 T 1 Le LL 39 CI 39 AI 39 LI 29 ]: ApplyLog 39, lastApplied 39,Command %!s(int=8898011987314286622)
+[N 2 T 1 Le LL 39 CI 39 AI 39 LI 29 ]:persist starts, voteFor 2 
+[N 2 T 1 Le LL 39 CI 39 AI 39 LI 29 ]:Snapshot succeed, index 39
+[N 2 T 1 Le LL 39 CI 39 AI 39 LI 39 ]:persist starts, voteFor 2 
+[N 1 T 1 Fo LL 26 CI 19 AI 19 LI 19 ]:InstallSnapshot fail, from 2, LastIncludedIndex 39, LastIncludedTerm 1
+[N 0 T 1 Fo LL 39 CI 38 AI 38 LI 29 ]: received a Entries, FollowerFail complex, leader id 2, PrevLogIndex 39, PrevLogTerm -1, my last log term 1, Entries len 0, FirstMatchIndex 1
+[N 2 T 1 Le LL 39 CI 39 AI 39 LI 39 ]:heart beat, failed to reach agreement with 0, nextIndex turn to 1, FollowerFail_SU
+[N 1 T 2 Ca LL 26 CI 19 AI 19 LI 19 ]:persist starts, voteFor 1 
+[N 1 T 2 Ca LL 26 CI 19 AI 19 LI 19 ]:start a vote broadcast!
+[N 2 T 1 Le LL 39 CI 39 AI 39 LI 39 ]:heart beat, succeed cnt 1, time out false
+[N 2 T 2 Fo LL 39 CI 39 AI 39 LI 39 ]:received a vote request from 1, term 2, args.LastLogTerm 1, my LastLogTerm -1 positive
+[N 2 T 2 Fo LL 39 CI 39 AI 39 LI 39 ]:persist starts, voteFor 1 
+[N 0 T 2 Fo LL 39 CI 38 AI 38 LI 29 ]:received a vote request from 1, term 2, args.LastLogTerm 1, my LastLogTerm 1 , votedFor -1, args.LastLogIndex 26, my LastLogIndex 38, negetive
+[N 1 T 2 Ca LL 26 CI 19 AI 19 LI 19 ]:get negetive vote from node 0, term 1
+[N 1 T 2 Fo LL 26 CI 19 AI 19 LI 19 ]:Canditate fail, Rejects:1
+[N 2 T 3 Ca LL 39 CI 39 AI 39 LI 39 ]:persist starts, voteFor 2 
+[N 2 T 3 Ca LL 39 CI 39 AI 39 LI 39 ]:start a vote broadcast!
+[N 1 T 3 Ca LL 26 CI 19 AI 19 LI 19 ]:persist starts, voteFor 1 
+[N 1 T 3 Ca LL 26 CI 19 AI 19 LI 19 ]:start a vote broadcast!
+[N 1 T 3 Ca LL 26 CI 19 AI 19 LI 19 ]:received a vote request from 2, term 3, negetive
+[N 2 T 3 Ca LL 39 CI 39 AI 39 LI 39 ]:received a vote request from 1, term 3, negetive
+[N 1 T 3 Ca LL 26 CI 19 AI 19 LI 19 ]:persist starts, voteFor 1 
+[N 0 T 3 Fo LL 39 CI 38 AI 38 LI 29 ]:received a vote request from 1, term 3, args.LastLogTerm 1, my LastLogTerm 1 , votedFor -1, args.LastLogIndex 26, my LastLogIndex 38, negetive
+[N 2 T 3 Ca LL 39 CI 39 AI 39 LI 39 ]:get negetive vote from node 1, term 3
+[N 2 T 3 Ca LL 39 CI 39 AI 39 LI 39 ]:persist starts, voteFor 2 
+[N 0 T 3 Fo LL 39 CI 38 AI 38 LI 29 ]:received a vote request from 2, term 3, args.LastLogTerm -1, my LastLogTerm 1 , votedFor -1, args.LastLogIndex 39, my LastLogIndex 38, negetive
+[N 1 T 3 Ca LL 26 CI 19 AI 19 LI 19 ]:get negetive vote from node 0, term 2
+[N 1 T 3 Fo LL 26 CI 19 AI 19 LI 19 ]:Canditate fail, Rejects:1
+[N 2 T 3 Fo LL 39 CI 39 AI 39 LI 39 ]:Canditate fail, Rejects:1
+[N 0 T 4 Ca LL 39 CI 38 AI 38 LI 29 ]:persist starts, voteFor 0 
+[N 0 T 4 Ca LL 39 CI 38 AI 38 LI 29 ]:start a vote broadcast!
+[N 1 T 4 Fo LL 26 CI 19 AI 19 LI 19 ]:received a vote request from 0, term 4, args.LastLogTerm 1, my LastLogTerm 1 positive
+[N 1 T 4 Fo LL 26 CI 19 AI 19 LI 19 ]:persist starts, voteFor 0 
+[N 0 T 4 Le LL 39 CI 38 AI 38 LI 29 ]:Canditate succeed, Votes:2
+[N 2 T 4 Fo LL 39 CI 39 AI 39 LI 39 ]:received a vote request from 0, term 4, args.LastLogTerm 1, my LastLogTerm -1 positive
+[N 2 T 4 Fo LL 39 CI 39 AI 39 LI 39 ]:persist starts, voteFor 0 
+[N 1 T 4 Fo LL 26 CI 19 AI 19 LI 19 ]: received a Entries, FollowerFail PrevLogIndex, leader id 0, PrevLogIndex 38, PrevLogTerm 1, Entries len 1
+[N 1 T 4 Fo LL 26 CI 19 AI 19 LI 19 ]:persist starts, voteFor 0 
+[N 0 T 4 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, failed to reach agreement with 1, nextIndex turn to 26, FollowerFail_SU
+[N 2 T 4 Fo LL 39 CI 39 AI 39 LI 39 ]: received a Entries, FollowerFail complex, leader id 0, PrevLogIndex 38, PrevLogTerm 1, my last log term -1, Entries len 1, FirstMatchIndex 37
+[N 0 T 4 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, failed to reach agreement with 2, nextIndex turn to 37, FollowerFail_SU
+[N 0 T 4 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, succeed cnt 1, time out false
+[N 1 T 4 Fo LL 26 CI 19 AI 19 LI 19 ]:InstallSnapshot fail, from 0, LastIncludedIndex 29, LastIncludedTerm 1
+[N 2 T 4 Fo LL 39 CI 39 AI 39 LI 39 ]: received a Entries, FollowerFail complex, leader id 0, PrevLogIndex 36, PrevLogTerm 1, my last log term -1, Entries len 3, FirstMatchIndex 35
+[N 0 T 4 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, failed to reach agreement with 2, nextIndex turn to 35, FollowerFail_SU
+[N 0 T 4 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, succeed cnt 1, time out false
+[N 1 T 4 Fo LL 26 CI 19 AI 19 LI 19 ]:InstallSnapshot fail, from 0, LastIncludedIndex 29, LastIncludedTerm 1
+[N 2 T 4 Fo LL 39 CI 39 AI 39 LI 39 ]: received a Entries, FollowerFail complex, leader id 0, PrevLogIndex 34, PrevLogTerm 1, my last log term -1, Entries len 5, FirstMatchIndex 33
+[N 0 T 4 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, failed to reach agreement with 2, nextIndex turn to 33, FollowerFail_SU
+[N 0 T 4 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, succeed cnt 1, time out false
+[N 1 T 5 Ca LL 26 CI 19 AI 19 LI 19 ]:persist starts, voteFor 1 
+[N 1 T 5 Ca LL 26 CI 19 AI 19 LI 19 ]:start a vote broadcast!
+[N 2 T 5 Fo LL 39 CI 39 AI 39 LI 39 ]:received a vote request from 1, term 5, args.LastLogTerm 1, my LastLogTerm -1 positive
+[N 0 T 5 Fo LL 39 CI 38 AI 38 LI 29 ]:received a vote request from 1, term 5, args.LastLogTerm 1, my LastLogTerm 1 , votedFor -1, args.LastLogIndex 26, my LastLogIndex 38, negetive
+[N 2 T 5 Fo LL 39 CI 39 AI 39 LI 39 ]:persist starts, voteFor 1 
+[N 1 T 5 Ca LL 26 CI 19 AI 19 LI 19 ]:get negetive vote from node 0, term 4
+[N 1 T 5 Fo LL 26 CI 19 AI 19 LI 19 ]:Canditate fail, Rejects:1
+[N 0 T 6 Ca LL 39 CI 38 AI 38 LI 29 ]:persist starts, voteFor 0 
+[N 0 T 6 Ca LL 39 CI 38 AI 38 LI 29 ]:start a vote broadcast!
+[N 2 T 6 Fo LL 39 CI 39 AI 39 LI 39 ]:received a vote request from 0, term 6, args.LastLogTerm 1, my LastLogTerm -1 positive
+[N 2 T 6 Fo LL 39 CI 39 AI 39 LI 39 ]:persist starts, voteFor 0 
+[N 0 T 6 Le LL 39 CI 38 AI 38 LI 29 ]:Canditate succeed, Votes:2
+[N 2 T 6 Fo LL 39 CI 39 AI 39 LI 39 ]: received a Entries, FollowerFail complex, leader id 0, PrevLogIndex 38, PrevLogTerm 1, my last log term -1, Entries len 1, FirstMatchIndex 37
+[N 0 T 6 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, failed to reach agreement with 2, nextIndex turn to 37, FollowerFail_SU
+[N 1 T 6 Fo LL 26 CI 19 AI 19 LI 19 ]:received a vote request from 0, term 6, args.LastLogTerm 1, my LastLogTerm 1 positive
+[N 1 T 6 Fo LL 26 CI 19 AI 19 LI 19 ]:persist starts, voteFor 0 
+[N 1 T 6 Fo LL 26 CI 19 AI 19 LI 19 ]: received a Entries, FollowerFail PrevLogIndex, leader id 0, PrevLogIndex 38, PrevLogTerm 1, Entries len 1
+[N 1 T 6 Fo LL 26 CI 19 AI 19 LI 19 ]:persist starts, voteFor 0 
+[N 0 T 6 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, failed to reach agreement with 1, nextIndex turn to 26, FollowerFail_SU
+[N 0 T 6 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, succeed cnt 1, time out false
+[N 1 T 6 Fo LL 26 CI 19 AI 19 LI 19 ]:InstallSnapshot fail, from 0, LastIncludedIndex 29, LastIncludedTerm 1
+[N 2 T 6 Fo LL 39 CI 39 AI 39 LI 39 ]: received a Entries, FollowerFail complex, leader id 0, PrevLogIndex 36, PrevLogTerm 1, my last log term -1, Entries len 3, FirstMatchIndex 35
+[N 0 T 6 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, failed to reach agreement with 2, nextIndex turn to 35, FollowerFail_SU
+[N 0 T 6 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, succeed cnt 1, time out false
+[N 1 T 6 Fo LL 26 CI 19 AI 19 LI 19 ]:InstallSnapshot fail, from 0, LastIncludedIndex 29, LastIncludedTerm 1
+[N 2 T 6 Fo LL 39 CI 39 AI 39 LI 39 ]: received a Entries, FollowerFail complex, leader id 0, PrevLogIndex 34, PrevLogTerm 1, my last log term -1, Entries len 5, FirstMatchIndex 33
+[N 0 T 6 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, failed to reach agreement with 2, nextIndex turn to 33, FollowerFail_SU
+[N 0 T 6 Le LL 39 CI 38 AI 38 LI 29 ]:heart beat, succeed cnt 1, time out false
+[N 1 T 7 Ca LL 26 CI 19 AI 19 LI 19 ]:persist starts, voteFor 1 
+[N 1 T 7 Ca LL 26 CI 19 AI 19 LI 19 ]:start a vote broadcast!
+[N 2 T 7 Fo LL 39 CI 39 AI 39 LI 39 ]:received a vote request from 1, term 7, args.LastLogTerm 1, my LastLogTerm -1 positive
+[N 2 T 7 Fo LL 39 CI 39 AI 39 LI 39 ]:persist starts, voteFor 1 
+[N 1 T 7 Le LL 26 CI 19 AI 19 LI 19 ]:Canditate succeed, Votes:2
+panic: runtime error: slice bounds out of range [:19] with capacity 18
+
+goroutine 200 [running]:
+6.824/raft.(*Raft).AppendEntries(0xc0000b8300, 0xc0000aadc0, 0xc0003d1530)
+	/home/ubuntu/6.824/MIT-6.824/src/raft/raft.go:470 +0xd27
+reflect.Value.call(0xc000058360, 0xc00000e568, 0x13, 0x5fe825, 0x4, 0xc000449bb8, 0x3, 0x3, 0xc000449a80, 0x4b81ad, ...)
+	/usr/lib/go-1.13/src/reflect/value.go:460 +0x5f6
+reflect.Value.Call(0xc000058360, 0xc00000e568, 0x13, 0xc000449bb8, 0x3, 0x3, 0xc0003c36c0, 0xc0000d2bc0, 0xc000365a30)
+	/usr/lib/go-1.13/src/reflect/value.go:321 +0xb4
+6.824/labrpc.(*Service).dispatch(0xc000065a00, 0x60139f, 0xd, 0x5b3ce0, 0xc000027990, 0x60139a, 0x12, 0x642480, 0x5a6a20, 0xc00045a000, ...)
+	/home/ubuntu/6.824/MIT-6.824/src/labrpc/labrpc.go:496 +0x682
+6.824/labrpc.(*Server).dispatch(0xc00000cce0, 0x5b3ce0, 0xc000027990, 0x60139a, 0x12, 0x642480, 0x5a6a20, 0xc00045a000, 0x152, 0x2b3, ...)
+	/home/ubuntu/6.824/MIT-6.824/src/labrpc/labrpc.go:420 +0x4a3
+6.824/labrpc.(*Network).processReq.func1(0xc00000cce0, 0x5b3ce0, 0xc000027990, 0x60139a, 0x12, 0x642480, 0x5a6a20, 0xc00045a000, 0x152, 0x2b3, ...)
+	/home/ubuntu/6.824/MIT-6.824/src/labrpc/labrpc.go:240 +0x60
+created by 6.824/labrpc.(*Network).processReq
+	/home/ubuntu/6.824/MIT-6.824/src/labrpc/labrpc.go:239 +0x141
+exit status 2
+FAIL	6.824/raft	3.216s
