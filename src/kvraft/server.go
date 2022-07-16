@@ -7,10 +7,10 @@ import (
 	"log"
 	"sync"
 	"sync/atomic"
-	// "time"
+	"time"
 )
 
-const Debug = true
+const Debug = false
 
 func LOG(format string, a ...interface{}) (n int, err error) {
 	if Debug {
@@ -31,7 +31,6 @@ type Op struct {
 type KVServer struct {
 	mu      sync.Mutex
 	wrmu1 	sync.RWMutex
-	wrmu2 	sync.RWMutex
 	wrmu3	sync.RWMutex
 	me      int
 	rf      *raft.Raft
@@ -41,7 +40,7 @@ type KVServer struct {
 	maxraftstate int // snapshot if log grows this big
 
 	dataMap			map[string]string
-	chanMap 		map[int64](chan bool)
+	chanMap 		map[int64](chan Op)
 	clientSeqMap	map[int64]int
 }
 
@@ -62,9 +61,9 @@ func (kv *KVServer) SetData(k,v string) {
 	kv.dataMap[k]=v
 }
 
-func(kv *KVServer) GetChan(idx int64) chan bool{
-	kv.wrmu2.Lock()
-	defer kv.wrmu2.Unlock()
+func(kv *KVServer) GetChan(idx int64) chan Op{
+	kv.mu.Lock()
+	defer kv.mu.Unlock()
 	v, ok := kv.chanMap[idx]
 	if !ok {
 		return  nil
@@ -73,9 +72,9 @@ func(kv *KVServer) GetChan(idx int64) chan bool{
 	}
 }
 
-func (kv *KVServer) SetChan(idx int64, v chan bool) {
-	kv.wrmu2.Lock()
-	defer kv.wrmu2.Unlock()
+func (kv *KVServer) SetChan(idx int64, v chan Op) {
+	kv.mu.Lock()
+	defer kv.mu.Unlock()
 	kv.chanMap[idx]= v
 }
 
@@ -106,73 +105,65 @@ func (kv *KVServer) SendOp(op Op) {
 func (kv *KVServer) Get(args *GetArgs, reply *GetReply) {
 	reply.ServerId = kv.me
 	reply.Value = ""
+
 	if _, isLeader := kv.rf.GetState(); !isLeader {
 		reply.Err = ErrWrongLeader
 		return
 	}
-	kv.mu.Lock()
-	// defer kv.mu.Unlock()
-
-	// seq := kv.GetClientSeq(args.ClientId)
-	// if seq >= args.Seq {
-	// 	kv.mu.Unlock()
-	// 	reply.Err = ErrWrongLeader
-	// 	return
-	// } else {
-		// kv.SetClientSeq(args.ClientId, args.Seq)
-		kv.SetChan(args.ClientId, make(chan bool))
-		// kv.chanMap[args.ClientId][args.HashId] = make(chan bool)
-		kv.mu.Unlock()
-		op := Op {
-			Command: "Get",
-			Key:	 args.Key,
-			ClientId:args.ClientId,
-			Seq:	args.Seq,
-		}
-		kv.SendOp(op)
-		select {
-		// case <- kv.chanMap[args.ClientId][args.HashId] :
-		case <- kv.GetChan(args.ClientId) :
+	if kv.GetChan(args.ClientId) == nil {
+		kv.SetChan(args.ClientId, make(chan Op))
+	}
+	op := Op {
+		Command: "Get",
+		Key:	 args.Key,
+		ClientId:args.ClientId,
+		Seq:	args.Seq,
+	}
+	kv.SendOp(op)
+	select {
+	case replyOp := <- kv.GetChan(args.ClientId) :
+		if replyOp.Seq == args.Seq {
 			reply.Err = OK
 			reply.Value = kv.dataMap[args.Key]
 			return
 		}
-	// }
+	case <- time.After(1000 * time.Millisecond) :
+		reply.Err = ErrWrongLeader
+		LOG("Server %d timeout", kv.me)
+		return
+	}
 }
 
 func (kv *KVServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) {
 	reply.ServerId = kv.me
+
 	if _, isLeader := kv.rf.GetState(); !isLeader {
 		reply.Err = ErrWrongLeader
 		return
 	}
-	kv.mu.Lock()
-	// defer kv.mu.Unlock()
-	// if _, ok := kv.chanMap[args.ClientId][args.HashId] ; ok { 
-	// seq := kv.GetClientSeq(args.ClientId)
-	// if seq >= args.Seq {
-	// 	kv.mu.Unlock()
-	// 	reply.Err = ErrWrongLeader
-	// 	return
-	// } else {
-		// kv.SetClientSeq(args.ClientId, args.Seq)
-		kv.SetChan(args.ClientId, make(chan bool))
-		kv.mu.Unlock()
-		op := Op {
-			Command: args.Op,
-			Key:	 args.Key,
-			Value:	 args.Value,
-			ClientId:args.ClientId,
-			Seq:	args.Seq,
-		}
-		kv.SendOp(op)
-		select {
-		// case <- kv.chanMap[args.ClientId][args.HashId] :
-		case <- kv.GetChan(args.ClientId) :
+	if kv.GetChan(args.ClientId) == nil {
+		kv.SetChan(args.ClientId, make(chan Op))
+	}
+	// kv.mu.Unlock()
+	op := Op {
+		Command: args.Op,
+		Key:	 args.Key,
+		Value:	 args.Value,
+		ClientId:args.ClientId,
+		Seq:	args.Seq,
+	}
+	kv.SendOp(op)
+	select {
+	case replyOp := <- kv.GetChan(args.ClientId) :
+		if replyOp.Seq == args.Seq {
 			reply.Err = OK
 			return
 		}
-	// }
+	case <- time.After(1000 * time.Millisecond) :
+		reply.Err = ErrWrongLeader
+		LOG("Server %d timeout", kv.me)
+		return
+	}
 }
 
 //
@@ -188,6 +179,7 @@ func (kv *KVServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) {
 func (kv *KVServer) Kill() {
 	atomic.StoreInt32(&kv.dead, 1)
 	kv.rf.Kill()
+	LOG("Server %d is killed\n", kv.me)
 	// Your code here, if desired.
 }
 
@@ -197,41 +189,51 @@ func (kv *KVServer) killed() bool {
 }
 
 func (kv *KVServer) ticker() {
-	for kv.dead == 0{
+	for {
 		msg := raft.ApplyMsg{}
 		select {
 		case msg = <- kv.applyCh:
-			op := msg.Command
-			key := op.(Op).Key
-			value := op.(Op).Value
-			command := op.(Op).Command
-			seq := op.(Op).Seq
-			_, f := kv.rf.GetState()
-			// if f {
-				// LOG("Server %d get a op back from raft, op %s, key %s, value %s, ClientId %d, Seq %d\n", 
-				// 	kv.rf.GetMe(), command, key, value, op.(Op).ClientId, seq)
-			// }
-			if seq > kv.GetClientSeq(op.(Op).ClientId) {
-				LOG("Server %d get a op back from raft, op %s, key %s, value %s, ClientId %d, Seq %d\n", 
-					kv.rf.GetMe(), command, key, value, op.(Op).ClientId, seq)
-				kv.SetClientSeq(op.(Op).ClientId, seq)
-				if command == "Put" {
-					kv.SetData(key, value)
-					// kv.dataMap[key] = value
-					if f {
-						LOG("KEY %s, VALUE %s", key, kv.dataMap[key])
+			if !kv.killed() {
+				kv.mu.Lock()
+				op := msg.Command
+				key := op.(Op).Key
+				value := op.(Op).Value
+				command := op.(Op).Command
+				seq := op.(Op).Seq
+				_, f := kv.rf.GetState()
+				if seq > kv.GetClientSeq(op.(Op).ClientId) {
+					LOG("Server %d get a op back from raft, op %s, key %s, value %s, ClientId %d, Seq %d\n", 
+						kv.rf.GetMe(), command, key, value, op.(Op).ClientId, seq)
+					kv.SetClientSeq(op.(Op).ClientId, seq)
+					if command == "Put" {
+						kv.SetData(key, value)
+						if f {
+							LOG("KEY %s, VALUE %s", key, kv.dataMap[key])
+						}
+					} else if command == "Append" {
+						kv.SetData(key, kv.GetData(key) + value)
+						if f {
+							LOG("KEY %s, VALUE %s", key, kv.dataMap[key])
+						}
+					} else if command == "Get" {
+						
 					}
-				} else if command == "Append" {
-					kv.SetData(key, kv.GetData(key) + value)
-					// kv.dataMap[key] = kv.dataMap[key] + value
-					if f {
-						LOG("KEY %s, VALUE %s", key, kv.dataMap[key])
-					}
-				} else if command == "Get" {
-					
+				} else {
+					LOG("Server %d get a op back from raft, but Fail, op %s, key %s, value %s, ClientId %d, Seq %d\n", 
+						kv.rf.GetMe(), command, key, value, op.(Op).ClientId, seq)
 				}
+				kv.mu.Unlock()
+				// LOG("Server %d Beg channel to client %d\n", kv.me, op.(Op).ClientId)
+				go func() {
+					ch := kv.GetChan(op.(Op).ClientId)
+					// kv.wrmu2.Lock()
+					if ch != nil {
+						ch <- op.(Op)
+					}
+				}()
+				// kv.wrmu2.Unlock()
+				// LOG("Server %d End channel to client %d\n", kv.me, op.(Op).ClientId)
 			}
-			kv.GetChan(op.(Op).ClientId) <- true
 		}
 		
 	}
@@ -259,17 +261,19 @@ func StartKVServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persiste
 	// call labgob.Register on structures you want
 	// Go's RPC library to marshall/unmarshall.
 	labgob.Register(Op{})
-
 	kv := new(KVServer)
 	kv.me = me
 	kv.maxraftstate = maxraftstate
 
 	kv.applyCh = make(chan raft.ApplyMsg)
 	kv.rf = raft.Make(servers, me, persister, kv.applyCh)
-	kv.chanMap = make(map[int64](chan bool))
+	kv.chanMap = make(map[int64](chan Op))
 	kv.dataMap = make(map[string]string)
 	kv.clientSeqMap = make(map[int64]int)
 
+	_, f := kv.rf.GetState()
+
+	LOG("Server %d start, is Leader: %v!\n", me, f)
 
 	kv.readFromLog()
 

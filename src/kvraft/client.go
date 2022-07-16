@@ -49,6 +49,7 @@ func (ck *Clerk) SendPutAppendRequest(serverId int,
 	replyCh chan PutAppendReply, 
 	args PutAppendArgs, 
 	reply PutAppendReply) {
+	// LOG("client %d sent seq %d to server %d", ck.me, ck.seq, serverId)
 	ok := ck.servers[serverId].Call("KVServer.PutAppend", &args, &reply)
 	if ok {
 	replyCh <- reply
@@ -71,7 +72,6 @@ func (ck *Clerk) SendPutAppendRequest(serverId int,
 func (ck *Clerk) Get(key string) string {
 	ck.mu.Lock()
 	defer ck.mu.Unlock()
-	hashId := nrand()
 	args := GetArgs{key, ck.me, ck.seq}
 	serverId := ck.leaderIdCache
 	
@@ -85,15 +85,16 @@ func (ck *Clerk) Get(key string) string {
 		select {
 		case <- time.After(1000 * time.Millisecond) :
 			serverId = (serverId + 1) % len(ck.servers)
-			LOG("Client %d hashId %d time out!", ck.me, hashId)
+			LOG("Client %d time out, waiting for seq %d, change server from %d to %d!", ck.me, ck.seq, serverId, (serverId + 1) % len(ck.servers))
 			break
 		case reply = <- replyCh:
-			if reply.Err == OK {
+			if reply.Err == OK{
 				ck.leaderIdCache = reply.ServerId
 				ck.seq++
-				LOG("Client %d receive Op %s from %d, key %s, value %s, HashId %d", ck.me, "Get", reply.ServerId, key, reply.Value, hashId)
+				LOG("Client %d receive Op %s from %d, key %s, value %s", ck.me, "Get", reply.ServerId, key, reply.Value)
 				return reply.Value
-			} else {
+				} else {
+				LOG("Client %d receive Fail %s from %d, key %s, seq %d, change server from %d to %d", ck.me, "Get", reply.ServerId, key, ck.seq, serverId, (serverId + 1) % len(ck.servers))
 				serverId = (serverId + 1) % len(ck.servers)
 				break
 			}
@@ -114,7 +115,6 @@ func (ck *Clerk) Get(key string) string {
 func (ck *Clerk) PutAppend(key string, value string, op string) {
 	ck.mu.Lock()
 	defer ck.mu.Unlock()
-	hashId := nrand()
 	args := PutAppendArgs{key, value, ck.me, op, ck.seq}
 	serverId := ck.leaderIdCache
 	LOG("Client %d Send Op %s , key %s, value %s, seq %d", ck.me, op, key, value, ck.seq)
@@ -126,16 +126,17 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
 
 		select {
 		case <- time.After(1000 * time.Millisecond) :
-			LOG("Client %d hashId %d time out!", ck.me, hashId)
+			LOG("Client %d time out, waiting for seq %d, change server from %d to %d!", ck.me, ck.seq, serverId, (serverId + 1) % len(ck.servers))
 			serverId = (serverId + 1) % len(ck.servers)
 			break
 		case reply = <- replyCh:
-			if reply.Err == OK  {
+			if reply.Err == OK{
 				ck.leaderIdCache = reply.ServerId
 				ck.seq++
-				LOG("Client %d receive Op %s from %d, key %s, value %s, hashId %d", ck.me, op, reply.ServerId, key, value, hashId)
+				LOG("Client %d receive Op %s from %d, key %s, value %s", ck.me, op, reply.ServerId, key, value)
 				return
 			} else {
+				LOG("Client %d receive Fail %s from %d, key %s, seq %d, change server from %d to %d", ck.me, "Get", reply.ServerId, key, ck.seq, serverId, (serverId + 1) % len(ck.servers))
 				serverId = (serverId + 1) % len(ck.servers)
 				break
 			}
